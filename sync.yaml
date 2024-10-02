@@ -1,0 +1,87 @@
+# define GitHub Project v2 to Jira Project mapping
+# It is used to extract the sprint, story points and status mapping
+githubProjects:
+  - name: Podman Desktop Planning
+    storyPoints:
+      fieldName: Story Points
+      type: number
+    status:
+      fieldName: Status
+      type: singleSelect
+    sprint:
+      fieldName: Sprint
+      type: iteration
+
+statusTypeMappings:
+  - name: Podman Desktop Status Mapping
+    # default is Backlog if no mapping is found
+    default: Backlog
+    mapping:
+      - fromGithub: 📋 Backlog
+        toJira: Backlog
+      - fromGithub: 📅 Planned
+        toJira: Backlog
+      - fromGithub: 🚧 In Progress
+        toJira: In Progress
+      - fromGithub: 🚥 In Review
+        toJira: Review
+      - fromGithub: ⏳On Hold
+        toJira: Backlog
+      - fromGithub: ✔️ Done
+        toJira: Closed
+      - fromGithub: ⏱Postponed
+        toJira: Backlog
+
+
+
+issuesTypeMappings:
+  - name: Podman Desktop Issue Mapping
+    default: Task
+    mapping:
+      - fromGithubLabel: kind/epic⚡
+        toJira: Epic
+      - fromGithubLabel: kind/feature 💡
+        toJira: Feature
+      - fromGithubLabel: kind/bug 🐞
+        toJira: Bug
+      - fromGithubLabel: kind/enhancement ✨
+        toJira: Enhancement
+      - fromGithubLabel: kind/release 🎉
+        toJira: Release Milestone
+      - fromGithubLabel: kind/task ☑️
+        toJira: Task
+      - fromGithubLabel: kind/design-spec 📐
+        toJira: Initiative
+
+syncProjects:
+  - name: "Podman Desktop"
+    github:
+      owner: containers
+      repo: podman-desktop
+      project: Podman Desktop Planning
+      afterDate: 2024-01-01
+    useMapping:
+     issueType: Podman Desktop Issue Mapping
+     statusType: Podman Desktop Status Mapping
+    jira:
+      projectKey: PODMAND
+      component: Podman Desktop
+      globalIdPrefix: PODMAN-DESKTOP
+      sprintBoard: Podman Desktop board
+    maxBatchSize: 1
+    
+  - name: "Podman Desktop AI Lab"
+    github:
+      owner: containers
+      repo: podman-desktop-extension-ai-lab
+      project: Podman Desktop Planning
+      afterDate: 2022-01-01
+    useMapping:
+     issueType: Podman Desktop Issue Mapping
+     statusType: Podman Desktop Status Mapping
+    jira:
+      projectKey: PODMAND
+      component: AI Lab
+      globalIdPrefix: AI-LAB
+      sprintBoard: Podman Desktop board
+    maxBatchSize: 1
