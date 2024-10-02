@@ -68,7 +68,7 @@ syncProjects:
       component: Podman Desktop
       globalIdPrefix: PODMAN-DESKTOP
       sprintBoard: Podman Desktop board
-    maxBatchSize: 50
+    maxBatchSize: 100
     
   - name: "Podman Desktop AI Lab"
     github:
