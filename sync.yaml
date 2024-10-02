@@ -85,3 +85,115 @@ syncProjects:
       globalIdPrefix: AI-LAB
       sprintBoard: Podman Desktop board
     maxBatchSize: 50
+
+  - name: "Podman Desktop bootc extension"
+    github:
+      owner: containers
+      repo: podman-desktop-extension-bootc
+      project: Podman Desktop Planning
+      afterDate: 2022-01-01
+    useMapping:
+     issueType: Podman Desktop Issue Mapping
+     statusType: Podman Desktop Status Mapping
+    jira:
+      projectKey: PODMAND
+      component: bootc-extension
+      globalIdPrefix: BOOTC-EXT
+      sprintBoard: Podman Desktop board
+    maxBatchSize: 50
+
+  - name: "Podman Desktop minikube extension"
+    github:
+      owner: containers
+      repo: podman-desktop-extension-minikube
+      project: Podman Desktop Planning
+      afterDate: 2022-01-01
+    useMapping:
+     issueType: Podman Desktop Issue Mapping
+     statusType: Podman Desktop Status Mapping
+    jira:
+      projectKey: PODMAND
+      component: minikube-extension
+      globalIdPrefix: MINIKUBE-EXT
+      sprintBoard: Podman Desktop board
+    maxBatchSize: 20
+
+  - name: "Podman Desktop layers explorer extension"
+    github:
+      owner: containers
+      repo: podman-desktop-extension-layers-explorer
+      project: Podman Desktop Planning
+      afterDate: 2022-01-01
+    useMapping:
+     issueType: Podman Desktop Issue Mapping
+     statusType: Podman Desktop Status Mapping
+    jira:
+      projectKey: PODMAND
+      component: layers-explorer-extension
+      globalIdPrefix: LAYERS_EXPLORER-EXT
+      sprintBoard: Podman Desktop board
+    maxBatchSize: 20
+
+  - name: "Podman Desktop Red Hat account extension"
+    github:
+      owner: redhat-developer
+      repo: podman-desktop-redhat-account-ext
+      project: Podman Desktop Planning
+      afterDate: 2022-01-01
+    useMapping:
+     issueType: Podman Desktop Issue Mapping
+     statusType: Podman Desktop Status Mapping
+    jira:
+      projectKey: PODMAND
+      component: redhat-account-extension
+      globalIdPrefix: REDHAT-ACCOUNT-EXT
+      sprintBoard: Podman Desktop board
+    maxBatchSize: 20
+
+  - name: "Podman Desktop Red Hat sandbox extension"
+    github:
+      owner: redhat-developer
+      repo: podman-desktop-sandbox-ext
+      project: Podman Desktop Planning
+      afterDate: 2022-01-01
+    useMapping:
+     issueType: Podman Desktop Issue Mapping
+     statusType: Podman Desktop Status Mapping
+    jira:
+      projectKey: PODMAND
+      component: redhat-sandbox-extension
+      globalIdPrefix: REDHAT-SANDBOX-EXT
+      sprintBoard: Podman Desktop board
+    maxBatchSize: 20
+
+  - name: "Podman Desktop Red Hat sandbox extension"
+    github:
+      owner: redhat-developer
+      repo: podman-desktop-sandbox-ext
+      project: Podman Desktop Planning
+      afterDate: 2022-01-01
+    useMapping:
+     issueType: Podman Desktop Issue Mapping
+     statusType: Podman Desktop Status Mapping
+    jira:
+      projectKey: PODMAND
+      component: redhat-sandbox-extension
+      globalIdPrefix: REDHAT-SANDBOX-EXT
+      sprintBoard: Podman Desktop board
+    maxBatchSize: 20
+
+  - name: "CRC extension"
+    github:
+      owner: crc-org
+      repo: crc-extension
+      project: Podman Desktop Planning
+      afterDate: 2022-01-01
+    useMapping:
+     issueType: Podman Desktop Issue Mapping
+     statusType: Podman Desktop Status Mapping
+    jira:
+      projectKey: PODMAND
+      component: crc-extension
+      globalIdPrefix: CRC-EXT
+      sprintBoard: Podman Desktop board
+    maxBatchSize: 20
