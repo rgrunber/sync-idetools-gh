@@ -100,7 +100,7 @@ syncProjects:
       component: Bootc extension
       globalIdPrefix: BOOTC-EXT
       sprintBoard: Podman Desktop board
-    maxBatchSize: 20
+    maxBatchSize: 100
 
   - name: "Podman Desktop minikube extension"
     github:
