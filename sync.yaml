@@ -97,7 +97,7 @@ syncProjects:
      statusType: Podman Desktop Status Mapping
     jira:
       projectKey: PODMAND
-      component: bootc-extension
+      component: Bootc extension
       globalIdPrefix: BOOTC-EXT
       sprintBoard: Podman Desktop board
     maxBatchSize: 50
@@ -113,7 +113,7 @@ syncProjects:
      statusType: Podman Desktop Status Mapping
     jira:
       projectKey: PODMAND
-      component: minikube-extension
+      component: Minikube extension
       globalIdPrefix: MINIKUBE-EXT
       sprintBoard: Podman Desktop board
     maxBatchSize: 20
@@ -129,7 +129,7 @@ syncProjects:
      statusType: Podman Desktop Status Mapping
     jira:
       projectKey: PODMAND
-      component: layers-explorer-extension
+      component: Layers Explorer extension
       globalIdPrefix: LAYERS_EXPLORER-EXT
       sprintBoard: Podman Desktop board
     maxBatchSize: 20
@@ -145,7 +145,7 @@ syncProjects:
      statusType: Podman Desktop Status Mapping
     jira:
       projectKey: PODMAND
-      component: redhat-account-extension
+      component: Red Hat Account extension
       globalIdPrefix: REDHAT-ACCOUNT-EXT
       sprintBoard: Podman Desktop board
     maxBatchSize: 20
@@ -161,23 +161,7 @@ syncProjects:
      statusType: Podman Desktop Status Mapping
     jira:
       projectKey: PODMAND
-      component: redhat-sandbox-extension
-      globalIdPrefix: REDHAT-SANDBOX-EXT
-      sprintBoard: Podman Desktop board
-    maxBatchSize: 20
-
-  - name: "Podman Desktop Red Hat sandbox extension"
-    github:
-      owner: redhat-developer
-      repo: podman-desktop-sandbox-ext
-      project: Podman Desktop Planning
-      afterDate: 2022-01-01
-    useMapping:
-     issueType: Podman Desktop Issue Mapping
-     statusType: Podman Desktop Status Mapping
-    jira:
-      projectKey: PODMAND
-      component: redhat-sandbox-extension
+      component: Red Hat Sandbox extension
       globalIdPrefix: REDHAT-SANDBOX-EXT
       sprintBoard: Podman Desktop board
     maxBatchSize: 20
@@ -193,7 +177,7 @@ syncProjects:
      statusType: Podman Desktop Status Mapping
     jira:
       projectKey: PODMAND
-      component: crc-extension
+      component: crc extension
       globalIdPrefix: CRC-EXT
       sprintBoard: Podman Desktop board
     maxBatchSize: 20
