@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+  # every hour    
+  schedule:
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 name: Sync GitHub to Jira
