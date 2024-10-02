@@ -25,9 +25,9 @@ jobs:
       - name: Run GitHub to Jira Action
         uses: benoitf/github-to-jira-action@next
         with:
-          jiraHost: ${{ secrets.JIRA_HOST }}
-          jiraWriteToken: ${{ secrets.JIRA_WRITE_TOKEN }}
-          githubReadToken: ${{ secrets.READ_GITHUB_TOKEN }}
+          jira-host: ${{ secrets.JIRA_HOST }}
+          jira-write-token: ${{ secrets.JIRA_WRITE_TOKEN }}
+          github-read-token: ${{ secrets.READ_GITHUB_TOKEN }}
 
         # save the state using a custom token as default GITHUB_TOKEN does not have the required permissions
         # to save variables
