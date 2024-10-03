@@ -75,7 +75,7 @@ syncProjects:
       owner: containers
       repo: podman-desktop-internal
       project: Podman Desktop Planning
-      afterDate: 2024-01-01
+      afterDate: 2022-01-01
     useMapping:
      issueType: Podman Desktop Issue Mapping
      statusType: Podman Desktop Status Mapping
