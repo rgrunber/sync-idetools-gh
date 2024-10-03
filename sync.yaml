@@ -73,7 +73,7 @@ syncProjects:
   - name: "Podman Desktop internal"
     github:
       owner: containers
-      repo: podman-desktop
+      repo: podman-desktop-internal
       project: Podman Desktop Planning
       afterDate: 2024-01-01
     useMapping:
