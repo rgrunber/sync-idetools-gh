@@ -1,7 +1,7 @@
 # define GitHub Project v2 to Jira Project mapping
 # It is used to extract the sprint, story points and status mapping
 githubProjects:
-  - name: Podman Desktop Planning
+  - name: Java Tooling
     storyPoints:
       fieldName: Story Points
       type: number
@@ -13,187 +13,75 @@ githubProjects:
       type: iteration
 
 statusTypeMappings:
-  - name: Podman Desktop Status Mapping
-    # default is Backlog if no mapping is found
-    default: Backlog
+  - name: Java Tooling Status Mapping
+    # default is New if no mapping is found
+    default: New
     mapping:
-      - fromGithub: 📋 Backlog
-        toJira: Backlog
-      - fromGithub: 📅 Planned
-        toJira: Backlog
-      - fromGithub: 🚧 In Progress
+      - fromGithub: Todo
+        toJira: New
+      - fromGithub: In Progress
         toJira: In Progress
-      - fromGithub: 🚥 In Review
-        toJira: Review
-      - fromGithub: ⏳On Hold
-        toJira: Backlog
-      - fromGithub: ✔️ Done
+      - fromGithub: Pending review
+        toJira: In Progress
+      - fromGithub: Done
         toJira: Closed
-      - fromGithub: ⏱Postponed
-        toJira: Backlog
 
 
 
 issuesTypeMappings:
-  - name: Podman Desktop Issue Mapping
-    default: Task
+  - name: Java Tooling Issue Mapping
+    default: Bug
     mapping:
-      - fromGithubLabel: kind/epic⚡
-        toJira: Epic
-      - fromGithubLabel: kind/feature 💡
-        toJira: Feature
-      - fromGithubLabel: kind/bug 🐞
+      - fromGithubLabel: bug
         toJira: Bug
-      - fromGithubLabel: kind/enhancement ✨
-        toJira: Enhancement
-      - fromGithubLabel: kind/release 🎉
-        toJira: Release Milestone
-      - fromGithubLabel: kind/task ☑️
-        toJira: Task
-      - fromGithubLabel: kind/design-spec 📐
-        toJira: Initiative
+      - fromGithubLabel: enhancement
+        toJira: Bug
 
 syncProjects:
-  - name: "Podman Desktop"
-    github:
-      owner: containers
-      repo: podman-desktop
-      project: Podman Desktop Planning
-      afterDate: 2024-01-01
-    useMapping:
-     issueType: Podman Desktop Issue Mapping
-     statusType: Podman Desktop Status Mapping
-    jira:
-      projectKey: PODMAND
-      component: Podman Desktop
-      globalIdPrefix: PODMAN-DESKTOP
-      sprintBoard: Podman Desktop board
-    maxBatchSize: 200
-    
-  - name: "Podman Desktop internal"
-    github:
-      owner: containers
-      repo: podman-desktop-internal
-      project: Podman Desktop Planning
-      afterDate: 2022-01-01
-    useMapping:
-     issueType: Podman Desktop Issue Mapping
-     statusType: Podman Desktop Status Mapping
-    jira:
-      projectKey: PODMAND
-      component: Internal
-      globalIdPrefix: PODMAN-DESKTOP-INTERNAL
-      sprintBoard: Podman Desktop board
-    maxBatchSize: 200
-
-  - name: "Podman Desktop AI Lab"
-    github:
-      owner: containers
-      repo: podman-desktop-extension-ai-lab
-      project: Podman Desktop Planning
-      afterDate: 2022-01-01
-    useMapping:
-     issueType: Podman Desktop Issue Mapping
-     statusType: Podman Desktop Status Mapping
-    jira:
-      projectKey: PODMAND
-      component: AI Lab
-      globalIdPrefix: AI-LAB
-      sprintBoard: Podman Desktop board
-    maxBatchSize: 100
-
-  - name: "Podman Desktop bootc extension"
-    github:
-      owner: containers
-      repo: podman-desktop-extension-bootc
-      project: Podman Desktop Planning
-      afterDate: 2022-01-01
-    useMapping:
-     issueType: Podman Desktop Issue Mapping
-     statusType: Podman Desktop Status Mapping
-    jira:
-      projectKey: PODMAND
-      component: Bootc extension
-      globalIdPrefix: BOOTC-EXT
-      sprintBoard: Podman Desktop board
-    maxBatchSize: 100
-
-  - name: "Podman Desktop minikube extension"
-    github:
-      owner: containers
-      repo: podman-desktop-extension-minikube
-      project: Podman Desktop Planning
-      afterDate: 2022-01-01
-    useMapping:
-     issueType: Podman Desktop Issue Mapping
-     statusType: Podman Desktop Status Mapping
-    jira:
-      projectKey: PODMAND
-      component: Minikube extension
-      globalIdPrefix: MINIKUBE-EXT
-      sprintBoard: Podman Desktop board
-    maxBatchSize: 20
-
-  - name: "Podman Desktop layers explorer extension"
-    github:
-      owner: containers
-      repo: podman-desktop-extension-layers-explorer
-      project: Podman Desktop Planning
-      afterDate: 2022-01-01
-    useMapping:
-     issueType: Podman Desktop Issue Mapping
-     statusType: Podman Desktop Status Mapping
-    jira:
-      projectKey: PODMAND
-      component: Layers Explorer extension
-      globalIdPrefix: LAYERS_EXPLORER-EXT
-      sprintBoard: Podman Desktop board
-    maxBatchSize: 20
-
-  - name: "Podman Desktop Red Hat account extension"
+  - name: "VS Code Java"
     github:
       owner: redhat-developer
-      repo: podman-desktop-redhat-account-ext
-      project: Podman Desktop Planning
-      afterDate: 2022-01-01
+      repo: vscode-java
+      project: Java Tooling
+      afterDate: 2024-12-01
     useMapping:
-     issueType: Podman Desktop Issue Mapping
-     statusType: Podman Desktop Status Mapping
+     issueType: Java Tooling Issue Mapping
+     statusType: Java Tooling Status Mapping
     jira:
-      projectKey: PODMAND
-      component: Red Hat Account extension
-      globalIdPrefix: REDHAT-ACCOUNT-EXT
-      sprintBoard: Podman Desktop board
-    maxBatchSize: 20
+      projectKey: IDEEXT
+      component: vscode-java
+      globalIdPrefix: VSC-JAVA
+      sprintBoard: Java Tooling
+    maxBatchSize: 200
 
-  - name: "Podman Desktop Red Hat sandbox extension"
+  - name: "Eclipse JDT-LS"
     github:
-      owner: redhat-developer
-      repo: podman-desktop-sandbox-ext
-      project: Podman Desktop Planning
-      afterDate: 2022-01-01
+      owner: eclipse-jdtls
+      repo: eclipse.jdt.ls
+      project: Java Tooling
+      afterDate: 2024-12-01
     useMapping:
-     issueType: Podman Desktop Issue Mapping
-     statusType: Podman Desktop Status Mapping
+     issueType: Java Tooling Issue Mapping
+     statusType: Java Tooling Status Mapping
     jira:
-      projectKey: PODMAND
-      component: Red Hat Sandbox extension
-      globalIdPrefix: REDHAT-SANDBOX-EXT
-      sprintBoard: Podman Desktop board
-    maxBatchSize: 20
+      projectKey: IDEEXT
+      component: eclipse.jdt.ls
+      globalIdPrefix: JDT-LS
+      sprintBoard: Java Tooling
+    maxBatchSize: 200
 
-  - name: "CRC extension"
+  - name: "Eclipse JDT Core Incubator"
     github:
-      owner: crc-org
-      repo: crc-extension
-      project: Podman Desktop Planning
-      afterDate: 2022-01-01
+      owner: eclipse-jdtls
+      repo: eclipse-jdt-core-incubator
+      project: Java Tooling
+      afterDate: 2024-12-01
     useMapping:
-     issueType: Podman Desktop Issue Mapping
-     statusType: Podman Desktop Status Mapping
+     issueType: Java Tooling Issue Mapping
+     statusType: Java Tooling Status Mapping
     jira:
-      projectKey: PODMAND
-      component: crc extension
-      globalIdPrefix: CRC-EXT
-      sprintBoard: Podman Desktop board
-    maxBatchSize: 20
+      projectKey: IDEEXT
+      component: eclipse-jdt-core-incubator
+      globalIdPrefix: JDT-CORE-INCB
+      sprintBoard: Java Tooling
+    maxBatchSize: 200

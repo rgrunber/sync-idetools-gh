@@ -4,8 +4,8 @@ on:
     branches:
       - main
   # every hour    
-  schedule:
-    - cron: '0 * * * *'
+  # schedule:
+  #  - cron: '0 * * * *'
   workflow_dispatch:
 
 name: Sync GitHub to Jira
@@ -26,7 +26,7 @@ jobs:
           fi
 
       - name: Run GitHub to Jira Action
-        uses: benoitf/github-to-jira-action@next
+        uses: benoitf/github-to-jira-action@debug
         with:
           jira-host: ${{ secrets.JIRA_HOST }}
           jira-write-token: ${{ secrets.JIRA_WRITE_TOKEN }}
